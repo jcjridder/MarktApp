@@ -1,0 +1,40 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com-darryncampbell-cordova-plugin-intent": {
+      "PACKAGE_NAME": "nl.grabyourbag.markt"
+    },
+    "com.cesidiodibenedetto.filechooser": {
+      "PACKAGE_NAME": "nl.grabyourbag.markt"
+    },
+    "cordova-clipboard": {
+      "PACKAGE_NAME": "nl.grabyourbag.markt"
+    },
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "nl.grabyourbag.markt"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "nl.grabyourbag.markt"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "nl.grabyourbag.markt"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "nl.grabyourbag.markt"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "nl.grabyourbag.markt"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.1.1",
+      "PACKAGE_NAME": "nl.grabyourbag.markt"
+    }
+  },
+  "dependent_plugins": {}
+}

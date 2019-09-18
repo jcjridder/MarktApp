@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <script type="text/javascript">
+        window.onerror = function(err,fn,ln) {console.log("ERROR:" + err + ", " + fn + ":" + ln );};
+    </script>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://code.jquery.com data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *">
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="js/sellproduct.js"></script>
+    
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>My App</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <p class="menuButton"><a class='close-panel panelButton' href="index.html">Verkopen</a></p>
+            <p class="menuButton"><a class='close-panel panelButton' href="toevoegen.html">Toevoegen</a></p>
+        </div>
+    </div>
+
+    
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding">Verkopen</div>
+                    <div class="right">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content">
+                        <div class="content-block">
+                            <h1>Scan barcode om door te gaan</h1>
+                            <button class="defaultButton bigButton" id="barcodeButton" onclick="GetProductSale();">Scan barcode</button>
+                            <!-- <button class="defaultButton bigButton" id="barcodeButton">Scan barcode</button> -->
+
+                            <br />
+                            <br />
+                            <!-- <button onclick="window.location.replace('smartpin://payment?id=132465789132564;amount=1234;callbackUrl=grabyourbag.nl;reference=Mijnbetaling;type=PIN;end');">Testtest</button> -->
+<!--  -->
+
+                            <!-- <button onclick="RaboIntent();">lol</button> -->
+                                <br />
+                                <br />
+<!-- 
+                            <button onclick="window.location.replace('smartpin://payment?id=132465789132564&amount=1234&callbackUrl=grabyourbag.nl&reference=Mijnbetaling&type=PIN');">Testtest</button>
+
+                            <button onclick="window.location.replace('smartpin://payment?id=132465789132564;amount=1234;callbackUrl=grabyourbag.nl;reference=Mijnbetaling;type=PIN;end');">Testtest</button>
+
+
+-->
+                            <!-- <a href="smartpin://payment?id=132465789132564;amount=1234;callbackUrl=grabyourbag.nl;reference=Mijnbetaling;type=PIN;end">test</a> -->
+                            <br />
+                            <div id="orderDiv">
+                                <!-- Nog geen producten gescand -->
+                            </div>
+                        </div>
+    
+
+                        <div class="content-block">
+                        <div class="inputWrap">
+                        <p><label>Betaalmethode</label></p>
+                        <p><select id='method' name='method'>
+                        <option value='Pin'>Pin</option>
+                        <option value='Contant'>Contant</option>
+                        </select></p>
+                        </div>
+                        </div>
+
+
+                        <table>
+                            <tr>
+                                <td>Totaalprijs:</td>
+                                <td data-profit="0" id="myPrice">&euro; 0,00</td>
+                            </tr>
+                            <tr>
+                                <td>Winst:</td>
+                                <td data-price="0" id="myProfit">&euro; 0,00</td>
+                            </tr>
+                        </table>
+
+                        <button class="defaultButton bigButton" id="barcodeButtonSubmit" onclick="submitOrder();">Doorzetten</button>
+                        <!-- <button class="defaultButton bigButton" id="barcodeButtonSubmit">Doorzetten</button> -->
+                    </div>
+
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+            <!-- <div class="toolbar"> -->
+                <!-- <div class="toolbar-inner"> -->
+                    <!-- Toolbar links -->
+                    <!-- <a href="#" class="link">Link 1</a>
+                    <a href="#" class="link">Link 2</a>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/sellproduct.js"></script>
+    <script type="text/javascript" src="js/addproduct.js"></script>
+    <!-- <script type="text/javascript">
+    $(function(){
+        $("#barcodeButton").bind( "click", function() {
+            GetProductSale();
+        });
+        $("#barcodeButtonSubmit").bind( "click", function() {
+            submitOrder();
+        });
+        // $("#barcodeButton").click(function(){
+        //     GetProductSale();
+        // });
+    });</script> -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-file-chooser",
+        "scope": null,
+        "escapedName": "cordova-plugin-file-chooser",
+        "name": "cordova-plugin-file-chooser",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\Jessie den Ridder\\Documents\\NewApp\\MarktApp\\MarktApp"
+    ]
+  ],
+  "_from": "cordova-plugin-file-chooser@latest",
+  "_id": "cordova-plugin-file-chooser@1.0.1",
+  "_inCache": true,
+  "_location": "/cordova-plugin-file-chooser",
+  "_nodeVersion": "5.4.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-file-chooser-1.0.1.tgz_1493089468425_0.9547696867957711"
+  },
+  "_npmUser": {
+    "name": "caixiangsap",
+    "email": "xiang.cai@sap.com"
+  },
+  "_npmVersion": "3.10.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-file-chooser",
+    "scope": null,
+    "escapedName": "cordova-plugin-file-chooser",
+    "name": "cordova-plugin-file-chooser",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-file-chooser/-/cordova-plugin-file-chooser-1.0.1.tgz",
+  "_shasum": "87470398c43a9124e9be2ca8e43c734596f4d1c9",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-file-chooser",
+  "_where": "C:\\Users\\Jessie den Ridder\\Documents\\NewApp\\MarktApp\\MarktApp",
+  "author": {
+    "name": "CCWC-IT"
+  },
+  "bugs": {
+    "url": "https://github.com/caixiangsap/filechooser/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-file-chooser",
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {},
+  "description": "File Chooser for Cordova/Phonegap based on filechooser from cdibened & crypho & wrrzag88.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "87470398c43a9124e9be2ca8e43c734596f4d1c9",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-file-chooser/-/cordova-plugin-file-chooser-1.0.1.tgz"
+  },
+  "gitHead": "05dde6b8f98ce3dcca98c74e718111c420e21ecc",
+  "homepage": "https://github.com/caixiangsap/filechooser#readme",
+  "keywords": [
+    "cordova",
+    "filechooser",
+    "android",
+    "filepicker",
+    "phonegap",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "caixiangsap",
+      "email": "xiang.cai@sap.com"
+    }
+  ],
+  "name": "cordova-plugin-file-chooser",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caixiangsap/filechooser.git"
+  },
+  "scripts": {},
+  "version": "1.0.1"
+}

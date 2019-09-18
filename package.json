@@ -1,0 +1,31 @@
+{
+  "name": "nl.grabyourbag.markt",
+  "version": "1.0.0",
+  "displayName": "MarktApp",
+  "cordova": {
+    "platforms": [
+      "browser",
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-console": {},
+      "cordova-plugin-statusbar": {},
+      "phonegap-plugin-barcodescanner": {
+        "ANDROID_SUPPORT_V4_VERSION": "27.1.1"
+      },
+      "com-darryncampbell-cordova-plugin-intent": {}
+    }
+  },
+  "dependencies": {
+    "com-darryncampbell-cordova-plugin-intent": "git+https://github.com/darryncampbell/darryncampbell-cordova-plugin-intent.git",
+    "cordova-android": "^8.0.0",
+    "cordova-browser": "~5.0.4"
+  },
+  "devDependencies": {
+    "cordova-plugin-whitelist": "~1.2.0",
+    "cordova-plugin-console": "~1.0.1",
+    "cordova-plugin-statusbar": "~1.0.1",
+    "phonegap-plugin-barcodescanner": "https://github.com/jrontend/phonegap-plugin-barcodescanner"
+  }
+}

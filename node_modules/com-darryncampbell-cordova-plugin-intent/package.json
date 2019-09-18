@@ -1,0 +1,52 @@
+{
+  "_from": "git+https://github.com/darryncampbell/darryncampbell-cordova-plugin-intent.git",
+  "_id": "com-darryncampbell-cordova-plugin-intent@1.1.8",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/com-darryncampbell-cordova-plugin-intent",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git+https://github.com/darryncampbell/darryncampbell-cordova-plugin-intent.git",
+    "rawSpec": "git+https://github.com/darryncampbell/darryncampbell-cordova-plugin-intent.git",
+    "saveSpec": "git+https://github.com/darryncampbell/darryncampbell-cordova-plugin-intent.git",
+    "fetchSpec": "https://github.com/darryncampbell/darryncampbell-cordova-plugin-intent.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/darryncampbell/darryncampbell-cordova-plugin-intent.git#0906eb8db15561ea03d8e3af987b23dc0f8e689d",
+  "_spec": "git+https://github.com/darryncampbell/darryncampbell-cordova-plugin-intent.git",
+  "_where": "C:\\Users\\Jessie\\Documents\\Development\\NewApp\\MarktApp\\MarktApp",
+  "author": {
+    "name": "Darryn Campbell"
+  },
+  "bugs": {
+    "url": "https://github.com/darryncampbell/darryncampbell-cordova-plugin-intent/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "com-darryncampbell-cordova-plugin-intent",
+    "platforms": [
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "General purpose intent shim layer for cordova appliations on Android.  Handles various techniques for sending and receiving intents.",
+  "homepage": "https://github.com/darryncampbell/darryncampbell-cordova-plugin-intent#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "Intent"
+  ],
+  "license": "MIT",
+  "main": "intentShim.js",
+  "name": "com-darryncampbell-cordova-plugin-intent",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darryncampbell/darryncampbell-cordova-plugin-intent.git"
+  },
+  "version": "1.1.8"
+}
