@@ -20,7 +20,7 @@
   "dependencies": {
     "com-darryncampbell-cordova-plugin-intent": "git+https://github.com/darryncampbell/darryncampbell-cordova-plugin-intent.git",
     "cordova-android": "^8.0.0",
-    "cordova-browser": "~5.0.4"
+    "cordova-browser": "~6.0.0"
   },
   "devDependencies": {
     "cordova-plugin-whitelist": "~1.2.0",
